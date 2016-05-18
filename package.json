@@ -1,0 +1,20 @@
+{
+    "title": "CodePen",
+    "name": "codepen-theme",
+    "description": "Dark theme based on CodePen.",
+    "version": "1.0.8",
+    "author": "",
+    "homepage": "",
+    "repository": {
+        "type": "",
+        "url": ""
+    },
+    "license": "MIT",
+    "engines": {
+        "brackets": ">=1.0.0"
+    },
+    "theme": {
+        "file": "theme.css",
+        "dark": true
+    }
+}
