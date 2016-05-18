@@ -1,13 +1,13 @@
 {
     "title": "CodePen",
     "name": "codepen-theme",
-    "description": "Dark theme based on CodePen.",
-    "version": "1.0.8",
-    "author": "",
-    "homepage": "",
+    "description": "Dark theme based on CodePen.io",
+    "version": "1.0.0",
+    "author": "Travis Wagner <admin@travisawagner.com> (http://travisawagner.com/)",
+    "homepage": "https://github.com/trvswgnr/codepen-brackets-theme",
     "repository": {
-        "type": "",
-        "url": ""
+        "type": "git",
+        "url": "git@github.com:trvswgnr/codepen-brackets-theme.git"
     },
     "license": "MIT",
     "engines": {
