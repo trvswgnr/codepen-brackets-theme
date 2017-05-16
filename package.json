@@ -14,7 +14,7 @@
         "brackets": ">=1.0.0"
     },
     "theme": {
-        "file": "theme.css",
+        "file": "theme.less",
         "dark": true
     }
 }
