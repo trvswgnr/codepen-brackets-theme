@@ -1,0 +1,365 @@
+// Theme Colors
+@color_gold:     #ddca7e; @attribute: @color_gold;
+@color_sage:     #96b38a; @string: @color_sage;
+@color_ochre:    #d0782a; @number: @color_ochre;
+@color_blue:     #809bbd; @variable: @color_blue;
+@color_venus:    #9a8297; @property: @color_venus;
+@color_barley:   #a7925a; @tag: @color_barley;
+@color_pink:     #f92672; @error: @color_pink;
+@color_lime:     #57e236; @matching_bracket: @color_lime;
+@color_sycamore: #8d8042;
+@color_lavender: #ae81ff;
+@color_pablo:    #75715e;
+@color_seafoam:  #429870;
+@color_orange:   #ff6400;
+
+// White, Greys, Black
+@white: #ffffff;
+@white_05: fadeout(@white, 95%);
+@white_10: fadeout(@white, 90%);
+@white_25: fadeout(@white, 75%);
+@white_50: fadeout(@white, 50%);
+@color_eggshell: #f8f8f2;
+@color_eggshell_50: fadein(@color_eggshell, 0.5);
+@grey_1:  #eeeeee;
+@grey_2:  #cccccc;
+@grey_3:  #999999;
+@grey_4:  #8d8d8d;
+@grey_5:  #808080;
+@grey_6:  #767676;
+@grey_7:  #666666;
+@grey_8:  #555555;
+@grey_9:  #4b4b4b;
+@grey_10: #444444;
+@grey_11: #343434;
+@grey_12: #333333;
+@grey_13: #272726;
+@grey_14: #222222;
+@grey_15: #1d1f20; @background: @grey_15;
+@grey_16: #1b1b1b;
+@black:   #000000;
+
+// Fonts
+@font: Monaco, Source Sans Pro, monospace;
+
+body {
+  font-size: 14px;
+  line-height: 21px;
+  font-family: @font;
+  letter-spacing: 0.02em;
+  &.editor {
+    background: @color_gold;
+  }
+}
+
+[class*="cm-"] {
+  font-size: 14px;
+  line-height: 21px;
+  font-family: @font;
+  letter-spacing: 0.02em;
+}
+
+.cm-string {
+  color: @string;
+  &.cm-property {
+    color: @color_eggshell;
+  }
+}
+
+.cm-error {
+  background: @error;
+  color: @color_eggshell !important;
+}
+
+.cm-meta {
+  color: @color_venus;
+}
+
+.cm-comment {
+  color: @grey_7;
+}
+
+.cm-atom {
+  color: @color_gold;
+}
+
+.cm-number {
+  color: @number;
+}
+
+.cm-link {
+  color: @color_seafoam;
+}
+
+.cm-property {
+  color: @property;
+}
+
+.cm-attribute {
+  color: @attribute;
+}
+
+.cm-keyword {
+  color: @color_gold;
+}
+
+.cm-variable {
+  color: @color_gold;
+}
+
+.cm-variable-2 {
+  color: @variable;
+}
+
+.cm-variable-3 {
+  color: @white;
+}
+
+.cm-qualifier {
+  color: @color_gold;
+  &:hover {
+    color: @color_lavender;
+  }
+}
+
+.cm-builtin {
+  color: @color_gold;
+}
+
+.cm-operator {
+  color: @grey_2;
+}
+
+.cm-tag {
+  color: @tag;
+}
+
+.cm-bracket {
+  color: @color_barley;
+}
+
+.cm-def {
+  color: @color_blue;
+}
+
+.CodeMirror {
+  background: @background;
+  color: @color_eggshell;
+  border-left-color: @grey_16;
+  .CodeMirror-scroll {
+    background: @background;
+    color: @color_eggshell;
+  }
+  .cm-dk-whitespace-space::before {
+    background-color: @color_pablo !important;
+  }
+  .cm-dk-whitespace-tab::before {
+    background-color: @color_pablo !important;
+  }
+  .cm-dk-whitespace-leading-space::before {
+    background-color: @color_pablo !important;
+  }
+  .cm-dk-whitespace-leading-tab::before {
+    background-color: @color_pablo !important;
+  }
+  .cm-dk-whitespace-trailing-space::before {
+    background-color: @color_pablo !important;
+  }
+  .cm-dk-whitespace-trailing-tab::before {
+    background-color: @color_pablo !important;
+  }
+  &.cm-keymap-fat-cursor div.CodeMirror-cursor {
+    background: @color_eggshell_50 !important;
+  }
+}
+
+#not-editor {
+  background-color: @grey_14;
+  color: @color_eggshell;
+  transition: background-color 0.3s ease-out;
+}
+
+#image-holder {
+  background-color: @grey_14;
+  color: @color_eggshell;
+  transition: background-color 0.3s ease-out;
+}
+
+.CodeMirror-gutters {
+  background: @grey_15;
+  border-right: 0;
+}
+
+.CodeMirror-guttermarker {
+  color: @color_eggshell;
+}
+
+.CodeMirror-guttermarker-subtle {
+  color: @grey_7;
+}
+
+.CodeMirror-linenumber {
+  color: @grey_11;
+}
+
+.CodeMirror-cursor {
+  border-left: 1px solid @color_eggshell !important;
+  border-left-color: @white !important;
+}
+
+.CodeMirror-activeline-background {
+  background: @grey_13 !important;
+}
+
+.CodeMirror-focused {
+  .CodeMirror-activeline {
+    .CodeMirror-gutter-elt {
+      background: @grey_13 !important;
+      color: @grey_5;
+    }
+    .inline-widget .CodeMirror-gutter-elt {
+      color: @grey_6;
+    }
+  }
+  .CodeMirror-selected {
+    background: @white_10;
+  }
+}
+
+.CodeMirror-matchingbracket {
+  background-color: transparent!important;
+  color: @matching_bracket !important;
+  padding-bottom: 0.166em;
+  border-bottom: 1px solid @white_50;
+}
+
+.CodeMirror-matchingtag {
+  background-color: @white_10;
+  border-bottom: 1px solid @color_gold;
+  padding-bottom: 0.166em;
+}
+
+.CodeMirror-foldgutter {
+  color: @color_sycamore;
+  color: @color_sycamore;
+}
+
+.CodeMirror-foldgutter-blank {
+  color: @color_sycamore;
+}
+
+.CodeMirror-foldgutter-folded {
+  color: @color_sycamore;
+}
+
+.CodeMirror-foldgutter-open {
+  color: @color_sycamore;
+}
+
+.CodeMirror-foldgutter-open::after {
+  content: "\25be";
+  position: relative;
+  color: @grey_9;
+}
+
+.CodeMirror-foldgutter-folded::after {
+  content: "\25b8";
+  position: relative;
+  color: @grey_9;
+}
+
+.CodeMirror-foldmarker {
+  background-color: @grey_12;
+  border-color: @grey_8;
+  color: @grey_8;
+  padding: 0 10px;
+}
+
+.cm-header {
+  font-weight: bold;
+  color: @color_orange;
+}
+
+.cm-strong {
+  font-weight: bold;
+  color: @color_gold;
+}
+
+.cm-em {
+  font-style: italic;
+  color: @color_gold;
+}
+
+.CodeMirror-selected {
+  background: @white_05;
+}
+
+.powers {
+  border-bottom: 1px solid @white_05;
+}
+
+.editor-title-button {
+  svg {
+    fill: @grey_3;
+  }
+  &:hover svg {
+    fill: @grey_1;
+  }
+  &:focus svg {
+    fill: @grey_1;
+  }
+}
+
+.cm-searching {
+  background: @black;
+  outline: 2px solid @white_25;
+}
+
+.cm-unit {
+  color: @color_ochre;
+}
+
+.cm-string-2 {
+  color: @white;
+}
+
+.box {
+  background: @grey_15;
+  pre {
+    color: @white;
+  }
+}
+
+.CodeMirror-gutter-wrapper {
+  background: @grey_15;
+  pre {
+    color: @white;
+  }
+}
+
+div.CodeMirror-selected {
+  background: @grey_10 !important;
+}
+
+.box-html .cm-atom {
+  color: @color_sage;
+}
+
+.box-css .cm-tag {
+  color: @color_gold;
+}
+
+.editor .top-boxes {
+  background: @grey_15;
+  pre {
+    color: @white;
+  }
+}
+
+.CodeMirror-simplescroll-horizontal div {
+  background: @grey_7;
+}
+
+.CodeMirror-simplescroll-vertical div {
+  background: @grey_7;
+}
