@@ -47,7 +47,7 @@ font-style: normal;
 @black:   #000000;
 
 // Fonts
-@font:  Codepen, Source Sans Pro, monospace;
+@font: 14px/1.5 CodePen, monospace;
 
 body {
   font-size: 14px;
@@ -59,11 +59,13 @@ body {
   }
 }
 
-[class*="cm-"] {
-  font-size: 14px;
-  line-height: 21px;
-  font-family: @font;
+.CodeMirror {
+  font: @font;
   letter-spacing: 0.02em;
+  font-stretch: normal;
+  font-variant-caps: normal;
+  font-variant-ligatures: contextual;
+  font-variant-numeric: normal;
 }
 
 .cm-string {
