@@ -1,5 +1,5 @@
 # codepen-brackets-theme
-A theme for Brackets based on http://codepen.io
+A theme for Brackets that replicates the default theme on http://codepen.io.
 
 Now with Less!
 
